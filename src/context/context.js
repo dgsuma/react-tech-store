@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { linkData } from "./linkData";
 import { socialData } from "./socialData";
-import { items } from "./productData";
-// import { client } from "./contentful";
+// import { items } from "./productData";
+import { client } from "./contentful";
 
 const ProductContext = React.createContext();
 //Provider
@@ -32,15 +32,15 @@ class ProductProvider extends Component {
   };
   componentDidMount() {
     // data from local file called 'productData' & passes as (items)
-    this.setProducts(items);
+    // this.setProducts(items);
 
     // data from contentful API retrived & passed as (response.items)
-    // client
-    //   .getEntries({
-    //     content_type: "techStoreProducts"
-    //   })
-    //   .then(response => this.setProducts(response.items))
-    //   .catch(console.error);
+    client
+      .getEntries({
+        content_type: "techStoreProducts"
+      })
+      .then(response => this.setProducts(response.items))
+      .catch(console.error);
   }
 
   //set products
