@@ -31,10 +31,10 @@ class ProductProvider extends Component {
     shipping: false
   };
   componentDidMount() {
-    // data from local file called 'productData'
+    // data from local file called 'productData' & passes as (items)
     // this.setProducts(items);
 
-    // data from contentful API items
+    // data from contentful API retrived & passed as (response.items)
     client
       .getEntries({
         content_type: "techStoreProducts"
