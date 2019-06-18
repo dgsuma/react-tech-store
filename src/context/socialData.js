@@ -10,11 +10,11 @@ export const socialData = [
   {
     id: 2,
     icon: <FaTwitter className="icon" />,
-    url: "https://www.facebook.com"
+    url: "https://twitter.com/"
   },
   {
     id: 3,
     icon: <FaLinkedin className="icon" />,
-    url: "https://www.facebook.com"
+    url: "https://www.linkedin.com/"
   }
 ];
